@@ -5,23 +5,26 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "chai": "^3.5.0",
     "express": "^4.15.2",
     "express-json": "^1.0.0",
-    "istanbul": "^0.4.5",
     "jsonpatch": "^3.0.1",
     "jsonwebtoken": "^7.4.0",
-    "mocha": "^3.3.0",
-    "morgan": "^1.8.1",
     "request": "^2.81.0",
-    "sharp": "^0.17.3",
+    "sharp": "^0.17.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.2.0",
+    "babel-core": "=6.2.1",
+    "istanbul": "^1.0.0-alpha",
+    "mocha": "=2.3.4",
+    "morgan": "^1.8.1",
     "should": "^11.2.1",
     "supertest": "^3.0.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover _mocha -- ./test/ -R spec --recursive"
   },
   "author": "",
   "license": "ISC"
 }
+  
