@@ -154,25 +154,3 @@ var download = function(uri, filename, callback){
     request(uri).pipe(fs.createWriteStream(link)).on('close', function(){ callback(ext); });
   });
 };
-
-// download('https://www.google.com/images/srpr/logo3w.png', 'google.png', function(){
-//   console.log('done');
-// });
-
-//************ Returning Image to Server **************
-
- // var s = fs.createReadStream(file);
- //    s.on('open', function () {
- //        res.set('Content-Type', type);
- //        s.pipe(res);
- //    });
- //    s.on('error', function () {
- //        res.set('Content-Type', 'text/plain');
- //        res.status(404).end('Not found');
- //    });
-
- //************** RESIZING  ********************
- // https://github.com/lovell/sharp
-
- //************* Logging  ***************
- // https://blog.risingstack.com/node-js-logging-tutorial/
