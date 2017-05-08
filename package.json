@@ -22,7 +22,7 @@
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "babel-node ./node_modules/istanbul/lib/cli.js --include-all-sources cover _mocha -- ./test/ -R spec --recursive"
+    "test": "istanbul cover _mocha -- -R spec"	
   },
   "author": "",
   "license": "ISC"
